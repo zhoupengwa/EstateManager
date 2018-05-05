@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询房产信息</title>
+</head>
+<body>
+	<form action="user/listprettyhouses" method="post">
+		<input type="submit" value="查找已发布房屋">
+	</form>
+	<form action="user/listprettyhousesbytimedesc" method="post">
+		<input type="submit" value="按时间降序">
+	</form>
+	<form action="user/listprettyhousesbyprice" method="post">
+		<input type="submit" value="按价格升序">
+	</form>
+	<form action="user/listprettyhousesbypricedesc" method="post">
+		<input type="submit" value="按价格降序">
+	</form>
+	<form action="user/listprettyhousesbysize" method="post">
+		<input type="submit" value="按面积升序">
+	</form>
+	<form action="user/listprettyhousesbysizedesc" method="post">
+		<input type="submit" value="按面积降序">
+	</form>
+	<hr />
+	<hr />
+	<form action="user/listprettyhousesbysetprice" method="post">
+		<input type="text" name="start_price"> <input type="text"
+			name="end_price"> <input type="submit" value="按自定义价格查找">
+	</form>
+	<hr />
+	<form action="user/listprettyhousesbysetsize" method="post">
+		<input type="text" name="start_size"> <input type="text"
+			name="end_size"> <input type="submit" value="按自定义面积查找">
+	</form>
+	<hr />
+	<form action="user/listprettyhousesbysettype" method="post">
+		<input type="text" name="type"> <input type="submit"
+			value="按户型查找">
+	</form>
+	<hr />
+	<form action="user/listprettyhousesbysetkind" method="post">
+		<input type="text" name="kind"> <input type="submit"
+			value="按类型查找">
+	</form>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<form action="user/listprettyhousesbyparameterandorderbydefault"
+		method="post">
+		<input type="text" name="type"> <input type="text" name="kind">
+		<input type="text" name="start_price"> <input type="text"
+			name="end_price"> <input type="text" name="start_size">
+		<input type="text" name="end_size"> <input type="submit"
+			value="按类型查找">
+	</form>
+	<br />
+	<form action="user/listprettyhousesbyparameterandorderbypriceup"
+		method="post">
+		<input type="text" name="type"> <input type="text" name="kind">
+		<input type="text" name="start_size"> <input type="text"
+			name="end_size"> <input type="submit" value="按价格升序">
+	</form>
+	<br />
+	<form action="user/listprettyhousesbyparameterandorderbypricedown"
+		method="post">
+		<input type="text" name="type"> <input type="text" name="kind">
+		<input type="text" name="start_size"> <input type="text"
+			name="end_size"> <input type="submit" value="按价格降序">
+	</form>
+	<br />
+	<form action="user/listprettyhousesbyparameterandorderbysizeup"
+		method="post">
+		<input type="text" name="type"> <input type="text" name="kind">
+		<input type="text" name="start_price"> <input type="text"
+			name="end_price"> <input type="submit" value="按面积升序">
+		<br />
+	</form>
+	<form action="user/listprettyhousesbyparameterandorderbysizedown"
+		method="post">
+		<input type="text" name="type"> <input type="text" name="kind">
+		<input type="text" name="start_price"> <input type="text"
+			name="end_price"> <input type="submit" value="按面积降序序">
+	</form>
+	<br />
+	<form action="user/searchhouses" method="post">
+		<input type="text" name="parameter"> <input type="submit"
+			value="搜索">
+	</form>
+	<br />
+	<form action="user/listthreeimages" method="post">
+	<input type="submit"		value="轮播">
+	</form>
+
+</body>
+</html>

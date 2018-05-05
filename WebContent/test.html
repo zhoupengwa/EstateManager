@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <label>请输入数字1 : </label>
+    <input type="text" id="input_phone">
+    </br>
+    <label>请输入数字2 : </label>
+    <input type="password" id="input_password">
+    </br>
+    <!-- 按钮用来请求后台的数据 -->
+    <button id="request">用户登录</button>
+    <!-- 设置一些操作 -->
+    <script>
+        $("#request").click(function () {
+            $.ajax({
+                type: "post",
+                url: "user/login",
+                crossDomain: true,
+                data: {//上传参数
+                    phone: $("#input_phone").val(),
+                    password: $("#input_password").val()
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (jqObj) {
+                    console.log(jqObj.status)
+                }
+            });
+        });
+    </script>
+    <p/>
+    <button id="request2">查看个人信息</button>
+    <script>
+        $("#request2").click(function () {
+            $.ajax({
+                url: 'user/lookinfo', // 跨域
+                xhrFields: { withCredentials: true }, // 发送凭据
+                   dataType: 'json',
+                type: 'post',
+                crossDomain: true,
+                  data: { 'name': 'fdipzone' },
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (jqObj) {
+                    console.log(jqObj.status)
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
