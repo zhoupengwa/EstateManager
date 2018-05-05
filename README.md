@@ -1,5 +1,3 @@
-# EstateManager
-房地产交易系统后台，使用java原生JDBC数据库及事物操作，使用dao、service、domain、action四层架构
 ## 房产交易系统后台
 
 为web前端与安卓端提供接口，主要功能分为：
