@@ -445,8 +445,7 @@ public class HouseDao extends BaseDao {
 	public List<House> queryHouseByParameterOrderBySizeUp(String type, String kind, String startPrice, String endPrice)
 			throws Exception {
 		List<House> houses = null;
-		StringBuffer sql = new StringBuffer(
-				"select id,house_userid,house_name,house_kind,house_area,house_village,house_address,house_size,house_type,house_traded,house_qualified,house_contact,house_phone,house_price,house_time,house_image from tb_house where house_traded=0 and house_qualified=1 ");
+		StringBuffer sql = new StringBuffer("select id,house_userid,house_name,house_kind,house_area,house_village,house_address,house_size,house_type,house_traded,house_qualified,house_contact,house_phone,house_price,house_time,house_image from tb_house where house_traded=0 and house_qualified=1 ");
 		if (type == null && kind == null && startPrice == null) {
 			sql.append("order by house_size asc");
 			houses = super.query(sql.toString(), null, House.class);
@@ -474,7 +473,6 @@ public class HouseDao extends BaseDao {
 			houses = super.query(sql.toString(), new Object[] { kind, startPrice, endPrice }, House.class);
 		}
 		return houses;
-
 	}
 
 	// 按提交参数来查找【面积降序】
